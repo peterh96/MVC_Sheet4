@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@model MVC_Sheet4.Models.Meals
+
+<h2>StarSubs</h2><br/><br/>
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <p>Select a Sandwich</p>
+    @Html.EnumDropDownListFor(model => model.selectedSub)<br/><br/>
+
+    <p>Select a Size</p>
+    @Html.EnumDropDownListFor(model => model.selectedSize)<br/><br/>
+
+    <p>Select a Meal Deal</p>
+    @Html.EnumDropDownListFor(model => model.selectedMeal)<br/><br/>
+
+<input type="submit" value="Order">
+}
