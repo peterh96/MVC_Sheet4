@@ -17,5 +17,8 @@
     <p>Select a Meal Deal</p>
     @Html.EnumDropDownListFor(model => model.selectedMeal)<br/><br/>
 
+    <p>Quantity</p>
+    @Html.TextBoxFor(model => model.quantity, new {@type = "number", min = 0,max = 100 })<br/><br/>
+
 <input type="submit" value="Order">
 }

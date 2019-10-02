@@ -19,6 +19,7 @@ namespace MVC_Sheet4.Models
         public enum sizeTypes {onehitwonder = 0, blist = 1,  alist = 3,superstar = 4}
         public sizeTypes selectedSize { get; set; }
 
-
+        //quantity
+        public int quantity { get; set; }
     }
 }

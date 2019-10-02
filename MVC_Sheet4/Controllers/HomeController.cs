@@ -40,6 +40,9 @@ namespace MVC_Sheet4.Controllers
             double tax = 0.15 * total;
             double total_final = total + tax;
 
+            //quantity
+            double final_result = total_final * order.quantity;
+
             //ViewData stuff for results page
             ViewData["sub_type"] = order.selectedSub;
             ViewData["sub_size"] = order.selectedSize;
@@ -50,6 +53,8 @@ namespace MVC_Sheet4.Controllers
             ViewData["cost"] = total;
             ViewData["tax"] = tax;
             ViewData["total"] = total_final;
+
+            ViewData["final_result"] = final_result;
 
             return View("Result");
         }
